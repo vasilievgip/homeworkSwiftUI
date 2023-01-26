@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
-
+    
     @State private var isLogin = false
-
+    
     var body: some View {
         TabView() {
             FeedView()
                 .tabItem {
                     Label("Feed", systemImage: "house.fill")
                 }
-
+            
             if isLogin {
                 ProfileView()
                     .tabItem {
@@ -37,7 +37,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Video", systemImage: "play.rectangle.fill")
                 }
-
+            
             FavoriteCharactersView()
                 .tabItem {
                     Label("Favorite", image: "cheburashka")

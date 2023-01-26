@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct FavoriteCharactersRowView: View {
-
+    
     var post: Post
-
+    
     var body: some View {
         HStack {
             post.image
@@ -19,7 +19,7 @@ struct FavoriteCharactersRowView: View {
                 .clipShape(Circle())
                 .frame(width: 100, height: 100)
                 .padding(.leading, 12)
-
+            
             VStack(alignment: .leading) {
                 Text(post.name)
                     .font(.body)
@@ -28,7 +28,7 @@ struct FavoriteCharactersRowView: View {
                     .font(.body)
             }
             .padding(.leading, 12.0)
-
+            
             Spacer()
         }
     }
