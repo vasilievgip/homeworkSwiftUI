@@ -9,7 +9,18 @@ import SwiftUI
 
 struct FavoriteCharactersView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List(data) { post in
+
+                NavigationLink {
+                    FavoriteCharactersDetailsView(post: post)
+                } label: {
+                   FavoriteCharactersRowView(post: post)
+                }
+            }
+            .navigationTitle("Favorite Characters")
+            .listStyle(.plain)
+        }
     }
 }
 
