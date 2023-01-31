@@ -11,11 +11,11 @@ struct FavoriteCharactersView: View {
     var body: some View {
         NavigationView {
             List(data) { post in
-
+                
                 NavigationLink {
                     FavoriteCharactersDetailsView(post: post)
                 } label: {
-                   FavoriteCharactersRowView(post: post)
+                    FavoriteCharactersRowView(post: post)
                 }
             }
             .navigationTitle("Favorite Characters")
